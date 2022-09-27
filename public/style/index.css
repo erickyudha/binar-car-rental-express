@@ -1,0 +1,255 @@
+/* SERVICES */
+#services {
+  width: 70vw;
+  margin: 100px 15vw 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+#services ul li {
+  list-style: none;
+  background-image: url("/img/service_list_bullet.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 24px;
+  height: 24px;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+}
+
+/* WHY US */
+#why-us {
+  margin-top: 100px;
+}
+
+#why-us ul {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 32px;
+}
+
+#why-us .card {
+  border-radius: 8px;
+  min-height: 180px;
+  padding: 24px 24px;
+}
+
+#why-us img {
+  margin-bottom: 16px;
+}
+
+/* TESTIMONIAL */
+#testimonial {
+  margin-top: 100px;
+  align-items: center;
+}
+
+.testimonial-carousel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "carousel carousel"
+    "prev-btn next-btn";
+  gap: 24px;
+}
+
+.slick-list {
+  grid-area: carousel;
+}
+
+.control-c {
+  cursor: pointer;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  border: solid 1px #c4c4c4;
+  background-color: #fff;
+}
+.control-c:hover {
+  transition: 0.3s;
+  border: #5cb85f;
+  background-color: #5cb85f;
+}
+.control-c:hover > img {
+  filter: invert(1);
+  transition: 0.3s;
+}
+
+.a-left {
+  grid-area: prev-btn;
+  justify-self: end;
+}
+.a-right {
+  grid-area: next-btn;
+  justify-self: start;
+}
+
+.testimonial-card {
+  width: 690px;
+  min-height: 270px;
+  height: fit-content;
+  margin: 0 16px;
+
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  padding: 70px 32px;
+
+  display: grid !important;
+  grid-template-columns: 120px auto;
+  align-items: center;
+  grid-template-areas:
+    ". star-rating"
+    "profile-pic testimonial-quote"
+    "profile-pic profile-name";
+}
+
+.testimonial-card img {
+  grid-area: profile-pic;
+  align-self: start;
+}
+
+.testimonial-card .rating-container {
+  grid-area: star-rating;
+}
+
+.testimonial-card p {
+  grid-area: testimonial-quote;
+}
+
+.testimonial-card span {
+  grid-area: profile-name;
+}
+
+/* GETTING STARTED */
+#getting-started {
+  margin-top: 100px;
+}
+#getting-started > div {
+  padding: 64px 20vw;
+  min-height: 325px;
+  align-items: center;
+  border-radius: 13px;
+}
+
+#getting-started h1 {
+  text-align: center;
+}
+
+#getting-started p {
+  margin-bottom: 32px;
+  max-width: 460px;
+  text-align: center;
+}
+
+/* FAQ */
+#faq {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button {
+  border: solid 1px #d4d4d4;
+  border-radius: 4px !important;
+  line-height: 20px;
+  color: #000;
+  padding: 18px 24px;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 576px) {
+  /* SERVICES */
+  #services {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+    width: 100%;
+    margin: 0;
+    padding: 60px 16px 10px;
+    gap: 24px;
+  }
+
+  #services img {
+    width: 300px;
+    height: auto;
+    justify-self: center;
+    align-self: end;
+  }
+
+  /* WHY US */
+  #why-us {
+    margin-top: 60px;
+    align-items: center;
+  }
+
+  #why-us ul {
+    grid-template-columns: 1fr;
+  }
+
+  /* TESTIMONIAL */
+  #testimonial {
+    margin-top: 60px;
+  }
+
+  .testimonial-carousel {
+    gap: 16px;
+  }
+
+  .testimonial-card {
+    width: 90vw;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "profile-pic"
+      "star-rating"
+      "testimonial-quote"
+      "profile-name";
+    justify-items: center;
+    gap: 24px;
+  }
+
+  .testimonial-card p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .testimonial-card span {
+    position: relative;
+    top: -16px;
+  }
+
+  /* GETTING STARTED */
+  #getting-started {
+    margin-top: 60px;
+  }
+
+  #getting-started h1 {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
+
+  #getting-started p {
+    margin-bottom: 40px;
+  }
+
+  /* FAQ */
+  #faq {
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+    justify-items: center;
+    text-align: center;
+  }
+}
